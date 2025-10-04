@@ -1,0 +1,20 @@
+type: yolo11
+name: yolo11n
+display_name: YOLOv11n Ultralytics
+model_path: "P:/RDD v2/N-RDD2022-YOLO/y11n_v22/weights/best.onnx"
+confidence_threshold: 0.01
+input_height: 640
+input_width: 640
+nms_threshold: 0.45
+score_threshold: 0.5
+classes:
+  - D00
+  - D10
+  - D20
+  - D30
+  - D40
+  - D50
+  - D60
+  - D70
+  - D80
+  - D90
