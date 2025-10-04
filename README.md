@@ -18,22 +18,58 @@ The dataset has been augmented and modified to suit the specific requirements of
 
 The repository contains the following key directories:
 
-- **y11n_v22/**: YOLOv11 training outputs including model weights, evaluation metrics, and visualization results
-  - Confusion matrices (normalized and standard)
-  - Bounding box precision-recall curves
-  - Training and validation batch samples
-  - Label distributions
-  - Model performance results
+### y11n_v22/
+YOLOv11 training outputs including model weights, evaluation metrics, and visualization results (21 items):
 
-- **weight_analysis/**: Comprehensive analysis of model weights across training iterations
-  - Convolutional layer weight visualizations
-  - Feature distribution summaries
-  - Weight evolution tracking
+**Folders:**
+- `test_eval/`: Test evaluation results and metrics
+- `weights/`: Trained model weights and checkpoints
 
-- **layer_analysis/**: Feature map visualizations from different model layers
-  - Convolutional layer outputs
-  - Feature extraction analysis
-  - Layer-wise activation patterns
+**Evaluation Metrics:**
+- `confusion_matrix.png`: Standard confusion matrix for class-wise performance
+- `confusion_matrix_normalized.png`: Normalized confusion matrix
+- `BoxF1_curve.png`: F1-score vs confidence curve for bounding boxes
+- `BoxP_curve.png`: Precision curve for box predictions
+- `BoxPR_curve.png`: Precision-Recall curve for box detection
+- `BoxR_curve.png`: Recall curve for box predictions
+
+**Training Visualizations:**
+- `train_batch0.jpg`, `train_batch1.jpg`, `train_batch2.jpg`: Training batch samples with ground truth annotations
+- `val_batch0_labels.jpg`, `val_batch1_labels.jpg`, `val_batch2_labels.jpg`: Validation batch ground truth labels
+- `val_batch0_pred.jpg`, `val_batch1_pred.jpg`, `val_batch2_pred.jpg`: Validation batch predictions
+
+**Results:**
+- `labels.jpg`: Label distribution visualization
+- `results.png`: Training metrics and loss curves
+- `results.csv`: Detailed training metrics in CSV format
+- `args.yaml`: Training arguments and configuration
+
+### weight_analysis/
+Comprehensive analysis of model weights across training iterations (89 items):
+
+**Weight Visualizations:**
+- `weight_distribution_summary.png`: Overall weight distribution across the model
+- `weights_model_0_conv.png` through `weights_model_13_m_0_cv2_conv.png`: Layer-by-layer weight visualizations for convolutional layers
+
+**Analysis includes:**
+- Convolutional layer weight heatmaps at different model depths
+- Weight distribution patterns across model iterations
+- Feature extraction weight evolution
+- Attention mechanism weights (cv1, cv2 variants)
+- Multi-scale detection head weights (m_0 variants)
+
+### layer_analysis/
+Feature map visualizations from different model layers (89 items):
+
+**Feature Map Visualizations:**
+- `feature_maps_model_0_conv.png` through `feature_maps_model_16_m_0_cv2_conv.png`: Layer-wise feature activation patterns
+
+**Analysis covers:**
+- Input layer feature maps
+- Intermediate convolutional layer activations
+- Multi-scale feature pyramid outputs
+- Detection head feature representations
+- Spatial attention patterns across network depth
 
 ## System Requirements
 
@@ -117,12 +153,30 @@ Current settings are configured to default values and are subject to change as o
 
 ## Model Evaluation
 
-The repository includes comprehensive evaluation outputs:
+The repository includes comprehensive evaluation outputs in the `y11n_v22/` directory:
 
-- Confusion matrices for class-wise performance analysis
-- Precision-Recall curves for detection accuracy assessment
-- F1-Confidence curves for threshold optimization
-- Training loss curves and validation metrics
+- **Confusion Matrices:** Both standard and normalized versions for class-wise performance analysis
+- **Precision-Recall Curves:** Box detection accuracy assessment across confidence thresholds
+- **F1-Confidence Curves:** Optimal threshold identification for detection
+- **Training Visualizations:** Sample batches from training with ground truth annotations
+- **Validation Predictions:** Model predictions on validation set with comparison to ground truth
+- **Label Distribution:** Class balance and annotation statistics
+
+## Model Analysis
+
+### Weight Analysis
+The `weight_analysis/` folder contains 89 visualizations tracking weight distributions across all model layers, including:
+- Early layer feature extraction weights
+- Mid-layer representation weights
+- Detection head weights for multi-scale predictions
+- Cross-variant (cv1, cv2) attention weights
+
+### Layer Analysis
+The `layer_analysis/` folder provides 89 feature map visualizations showing:
+- Activation patterns at different network depths
+- Feature pyramid representations
+- Spatial attention across detection scales
+- Layer-wise feature evolution
 
 ## Contributing
 
