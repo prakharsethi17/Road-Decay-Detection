@@ -1,5 +1,17 @@
 # Road Decay Detection
 
+# Model Performance Visualization
+
+## F1-Confidence Curve
+<p align="center"> <img src="y11n_v22/BoxF1_curve.png" alt="F1-Confidence Curve"/> </p>
+
+The F1-Confidence curve shows the harmonic mean of precision and recall across different confidence thresholds for all road defect classes (D00-D90). The model achieves an optimal F1-score of 0.49 at a confidence threshold of 0.242, indicating the best balance between precision and recall. Class D50 demonstrates the highest performance with F1 scores around 0.72, while class D30 shows the most challenging detection performance.
+
+## Validation Batch Predictions
+Validation Batch 0
+![alt text](y11n_v22/val_batch0_pred.jpg)
+This validation batch showcases the model's detection capabilities on diverse road conditions. The model successfully identifies various defect types including longitudinal cracks (D00 - blue boxes), alligator cracks (D10 - cyan boxes), potholes (D20 - green boxes), and rutting damage (D40 - yellow boxes). Confidence scores range from 0.3 to 0.9, demonstrating robust detection across different defect severities and lighting conditions.
+
 **Note:** The prediction algorithm utilized in this project is currently under patent application and therefore cannot be shared publicly. The code provided in this repository is exclusively for road defect detection purposes and is released under an open-source license.
 
 ## Project Status
