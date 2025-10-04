@@ -186,13 +186,6 @@ Contributions to the detection module are welcome. Please ensure that any pull r
 
 The detection code in this repository is open-source. The prediction algorithm is proprietary and under patent application.
 
-## Citation
-
-If using this dataset, please cite:
-
-```
-KAYA, Ömer; Çodur, Muhammed Yasin (2024), "N-RDD2024:Road damage and defects", 
-Mendeley Data, V3, doi: 10.17632/27c8pwsd6v.3
 ```
 
 ## Disclaimer
